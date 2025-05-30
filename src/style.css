@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {  
+    --font-roboto: 'Roboto';
+    --font-rocksalt: 'Rock Salt';
+    --color-bleu: #24A6C6;
+    --color-noir: #131919;
+  }
