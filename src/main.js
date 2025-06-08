@@ -5,7 +5,7 @@ canvas.width = canvas.offsetWidth * dpr;
 canvas.height = canvas.offsetHeight * dpr;
 
     const r = new rive.Rive({
-        src: "images/logo-bleu.riv",
+        src: "/images/logo-bleu.riv",
         canvas: canvas,
         autoplay: true,
         stateMachines: "State Machine 1",

@@ -11,6 +11,31 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!--Alpine Library for Menus-->
     <script src="https://unpkg.com/@rive-app/canvas-lite"></script><!--Rive Library for Animations-->
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Morse Contact – Simple Website Support Widget">
+    <meta property="og:description" content="Add a support widget to your website and connect with customers via Telegram. One-time payment, no subscriptions.">
+    <meta property="og:url" content="https://morse.contact/">
+    <meta property="og:image" content="/images/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Morse Contact – Simple Website Support Widget">
+    <meta name="twitter:description" content="Add a support widget to your website and connect with customers via Telegram. One-time payment, no subscriptions.">
+    <meta name="twitter:image" content="/images/og-image.jpg">
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <!-- Android/Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/android-chrome-512x512.png">
+
 </head>
 
 <body>
@@ -28,17 +53,17 @@
                      after:content-[''] after:absolute after:left-0 after:-bottom-[1px] after:h-[2px] after:w-0 after:bg-yellow-500
                      after:transition-all after:duration-300 hover:after:w-full">
                     Guides</a>
-                <a href="/" class="relative text-zinc-500 text-base
+                <a href="/about" class="relative text-zinc-500 text-base
                      after:content-[''] after:absolute after:left-0 after:-bottom-[1px] after:h-[2px] after:w-0 after:bg-yellow-500
                      after:transition-all after:duration-300 hover:after:w-full">
                     About Us</a>
-                <a href="/" class="relative text-zinc-500 text-base
+                <a href="/morse" class="relative text-zinc-500 text-base
                      after:content-[''] after:absolute after:left-0 after:-bottom-[1px] after:h-[2px] after:w-0 after:bg-yellow-500
                      after:transition-all after:duration-300 hover:after:w-full">
                     Why Morse?</a>
             </div>
             <div class="md:flex hidden gap-8 items-center">
-                <a href="/" class="relative text-zinc-500 text-base
+                <a href="/login" class="relative text-zinc-500 text-base
                      after:content-[''] after:absolute after:left-0 after:-bottom-[1px] after:h-[2px] after:w-0 after:bg-yellow-500
                      after:transition-all after:duration-300 hover:after:w-full">
                     Login</a>
@@ -123,8 +148,8 @@
                     <div class="flex flex-col justify-between h-full">
                         <div class="flex flex-col gap-4">
                             <a href="#" class="text-zinc-500 text-base">Guides</a>
-                            <a href="#" class="text-zinc-500 text-base">About Us</a>
-                            <a href="#" class="text-zinc-500 text-base">Why Morse?</a>
+                            <a href="/about" class="text-zinc-500 text-base">About Us</a>
+                            <a href="/morse" class="text-zinc-500 text-base">Why Morse?</a>
                         </div>
                         <div>
                             <p class="mb-2 text-zinc-500 text-sm">© 2025 Morse.Contact</p>
@@ -152,7 +177,7 @@
                     With Your Customers
                     Anywhere
                     <span
-                        class="text-yellow-500 text-base md:text-4xl font-rocksalt absolute bottom-8 right-0 -rotate-12">Pay
+                        class="text-yellow-500 text-base md:text-4xl font-rocksalt absolute bottom-8 right-0 -rotate-12 hidden">Pay
                         Once</span>
                 </h1>
                 <p class="text-zinc-500 text-base">
@@ -187,7 +212,7 @@
                                 beautiful.</p>
                         </div>
                     </div>
-                    <img src="/images/client.png" alt="Hero Image"
+                    <img src="/images/anime/client.jpeg" alt="Hero Image"
                         class="h-72 md:h-[500px] w-full md:w-auto object-cover rounded-2xl">
                 </div>
             </div>
@@ -209,7 +234,7 @@
             <div class="w-full md:w-1/2">
                 <span class="block mb-2 font-bold text-bleu text-lg">Customize easily</span>
                 <h2 class="text-noir text-2xl md:text-4xl font-bold uppercase mb-3 relative">make it yours <span
-                        class="text-yellow-500 text-base md:text-xl font-rocksalt absolute bottom-4 md:bottom-8 left-44 rotate-12">Change
+                        class="text-yellow-500 text-base md:text-xl font-rocksalt absolute bottom-4 md:bottom-8 left-44 rotate-12 hidden">Change
                         colors</span></h2>
                 <p class="text-base text-zinc-500">Match the widget to your brand’s look and feel. Adjust colors and
                     details with ease, simple, flexible, and completely yours.</p>
@@ -256,7 +281,7 @@
         <!--Steps-->
         <div class="px-4 py-4 md:px-12 md:py-8 flex flex-col lg:flex-row my-12 lg:my-0 gap-4">
             <div class="w-full lg:w-7/12 p-4 rounded-4xl bg-zinc-300/30 backdrop-blur-2xl relative">
-                <img src="/images/sign-up.png" alt="Sign Up" class="w-full h-72 md:h-72 object-cover rounded-2xl">
+                <img src="/images/anime/sign-up.png" alt="Sign Up" class="w-full h-72 md:h-72 object-cover rounded-2xl">
                 <div class="absolute left-10 top-10">
                     <h2 class="text-3xl md:text-5xl uppercase font-bold text-white mb-2">Sign Up</h2>
                     <a href="/"
@@ -283,7 +308,7 @@
                 </div>
             </div>
             <div class="w-full lg:w-3/12 p-4 rounded-4xl bg-zinc-300/30 backdrop-blur-2xl relative">
-                <img src="/images/configure.png" alt="Configure" class="w-full h-72 md:h-72 object-cover rounded-2xl">
+                <img src="/images/anime/configure.jpeg" alt="Configure" class="w-full h-72 md:h-72 object-cover rounded-2xl">
                 <div
                     class="absolute top-0 mx-10 my-10 right-0 text-sm text-white bg-white/20 backdrop-blur-md p-4 rounded-lg h-fit">
                     <h3 class="text-2xl uppercase font-bold mb-2">Configure</h3>
@@ -317,7 +342,7 @@
                 <h2 class="text-noir text-2xl md:text-4xl font-bold uppercase mb-3 inline-block relative">Use telegram
                     to
                     support<span
-                        class="text-yellow-500 text-base md:text-xl font-rocksalt absolute bottom-8 md:bottom-8 right-0 md:-right-16 rotate-12">
+                        class="text-yellow-500 text-base md:text-xl font-rocksalt absolute bottom-8 md:bottom-8 right-0 md:-right-16 rotate-12 hidden">
                         Telegram</span>
                 </h2>
                 <p class="text-base text-zinc-500">We are here to make your life as easy as possible. Instead of a new
@@ -335,8 +360,8 @@
                     </a>
                 </div>
             </div>
-            <div class="p-4 rounded-4xl bg-zinc-300/30 backdrop-blur-2xl relative w-full md:w-auto">
-                <img src="/images/telegram.png" alt="Telegram Widget" class="w-full md:w-full object-cover rounded-2xl">
+            <div class="p-4 rounded-4xl bg-zinc-300/30 backdrop-blur-2xl relative w-full md:w-1/2">
+                <img src="/images/anime/telegram.jpeg" alt="Telegram Widget" class="w-full md:w-full object-cover rounded-2xl">
             </div>
         </div>
         <!--End of Telegram Section-->
@@ -358,7 +383,7 @@
                     <span class="block group-hover:-translate-x-0 md:group-hover:-translate-x-4 duration-200">Start
                         Now</span>
                     <img src="/images/icons/arrow-right.svg" alt="Arrow Right"
-                        class="absolute h-5 right-3 top-1/2 -translate-y-1/2 transition-transform duration-200 group-hover:translate-x-0 translate-x-10">
+                        class="hidden md:block absolute h-5 right-3 top-1/2 -translate-y-1/2 transition-transform duration-200 group-hover:translate-x-0 translate-x-10">
                 </a>
                 <a href="/#demo"
                     class="px-4 md:px-8 py-2 backdrop-blur-2xl border-bleu border-[1px] duration-200 group rounded-md relative overflow-hidden">
@@ -366,7 +391,7 @@
                         class="block group-hover:-translate-x-0 md:group-hover:-translate-x-4 duration-200 text-bleu">Try
                         a Demo</span>
                     <img src="/images/icons/arrow-right-bleu.svg" alt="Arrow Right"
-                        class="absolute h-5 right-3 top-1/2 -translate-y-1/2 transition-transform duration-200 group-hover:translate-x-0 translate-x-10">
+                        class="hidden md:block absolute h-5 right-3 top-1/2 -translate-y-1/2 transition-transform duration-200 group-hover:translate-x-0 translate-x-10">
                 </a>
             </div>
             <form id="start" class="hidden p-4 w-full rounded-4xl bg-zinc-300/30 backdrop-blur-2xl mt-8">
@@ -502,13 +527,13 @@
                                     href="mailto:hi@morse.contact" class="underline">hi@morse.contact</a></p>
                             <div class="flex gap-2 mt-4">
                                 <a href="#"><img src="/images/x.svg" alt="X"
-                                        class="h-5 hover:scale-105 scale-100 duration-200"></a>
+                                        class="h-5 opacity-70 hover:opacity-100 hover:scale-105 scale-100 duration-200"></a>
                                 <a href="#"><img src="/images/ig.svg" alt="Instagram"
-                                        class="h-5 hover:scale-105 scale-100 duration-200"></a>
+                                        class="h-5 opacity-70 hover:opacity-100 hover:scale-105 scale-100 duration-200"></a>
                                 <a href="#"><img src="/images/in.svg" alt="LinkedIn"
-                                        class="h-5 hover:scale-105 scale-100 duration-200"></a>
+                                        class="h-5 opacity-70 hover:opacity-100 hover:scale-105 scale-100 duration-200"></a>
                                 <a href="#"><img src="/images/tg.svg" alt="Telegram"
-                                        class="h-5 hover:scale-105 scale-100 duration-200"></a>
+                                        class="h-5 opacity-70 hover:opacity-100 hover:scale-105 scale-100 duration-200"></a>
                             </div>
                         </div>
                         <div class="flex flex-col md:flex-row gap-8 md:gap-16 -translate-x-2 md:translate-x-0">
@@ -529,8 +554,7 @@
                                 <ul class="text-zinc-500 text-sm flex flex-col gap-2">
                                     <li><a href="#" class="px-2 py-1 hover:bg-zinc-100 rounded-md duration-200">About
                                             Us</a></li>
-                                    <li><a href="#" class="px-2 py-1 hover:bg-zinc-100 rounded-md duration-200">Contact
-                                            Us</a></li>
+                                    <li><a href="#" class="px-2 py-1 hover:bg-zinc-100 rounded-md duration-200">Why Morse?</a></li>
                                     <li><a href="#" class="px-2 py-1 hover:bg-zinc-100 rounded-md duration-200">Brand
                                             Assets</a></li>
                                 </ul>

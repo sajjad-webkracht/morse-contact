@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!--Alpine Library for Menus-->
+    <script src="https://unpkg.com/@rive-app/canvas-lite"></script><!--Rive Library for Animations-->
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Morse Contact – Login">
+    <meta property="og:description"
+        content="Add a support widget to your website and connect with customers via Telegram. One-time payment, no subscriptions.">
+    <meta property="og:url" content="https://morse.contact/">
+    <meta property="og:image" content="/images/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Morse Contact – Login">
+    <meta name="twitter:description"
+        content="Add a support widget to your website and connect with customers via Telegram. One-time payment, no subscriptions.">
+    <meta name="twitter:image" content="/images/og-image.jpg">
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <!-- Android/Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/android-chrome-512x512.png">
+
+</head>
+
+<body>
+    <div id="app" class="font-roboto">
+        <!--Header Section-->
+        <header class="px-4 py-4 md:px-12 md:py-8 flex justify-between items-center relative">
+            <a href="/">
+                <img src="/images/logo-bleu.svg" alt="Morse Logo" class="h-7 md:hidden">
+                <canvas id="bleuLogo" class="hidden md:block h-9 w-7"></canvas>
+            </a>
+            <div class="md:flex hidden gap-8">
+                <a href="/" class="relative text-zinc-500 text-base
+                     after:content-[''] after:absolute after:left-0 after:-bottom-[1px] after:h-[2px] after:w-0 after:bg-yellow-500
+                     after:transition-all after:duration-300 hover:after:w-full">
+                    Guides</a>
+                <a href="/about" class="relative text-zinc-500 text-base
+                     after:content-[''] after:absolute after:left-0 after:-bottom-[1px] after:h-[2px] after:w-0 after:bg-yellow-500
+                     after:transition-all after:duration-300 hover:after:w-full">
+                    About Us</a>
+                <a href="/" class="relative text-zinc-500 text-base
+                     after:content-[''] after:absolute after:left-0 after:-bottom-[1px] after:h-[2px] after:w-0 after:bg-yellow-500
+                     after:transition-all after:duration-300 hover:after:w-full">
+                    Why Morse?</a>
+            </div>
+            <div class="md:flex hidden gap-8 items-center">
+                <a href="/" class="relative text-zinc-500 text-base
+                     after:content-[''] after:absolute after:left-0 after:-bottom-[1px] after:h-[2px] after:w-0 after:bg-yellow-500
+                     after:transition-all after:duration-300 hover:after:w-full">
+                    Login</a>
+                <a href="/#start"
+                    class="px-8 py-2 bg-bleu duration-200 group rounded-md text-white relative overflow-hidden">
+                    <span class="block group-hover:-translate-x-4 duration-200">Start Now</span>
+                    <img src="/images/icons/arrow-right.svg" alt="Arrow Right"
+                        class="absolute h-5 right-3 top-1/2 -translate-y-1/2 transition-transform duration-200 group-hover:translate-x-0 translate-x-10">
+                </a>
+                <div x-data="{ open: false }" class="relative">
+                    <div @click="open = !open"
+                        class="border-bleu rounded-md border-[1px] px-2 py-2 cursor-pointer flex items-center gap-2 relative overflow-hidden group active:translate-y-0.5 duration-200">
+                        <span class="text-sm text-bleu translate-y-0 group-hover:translate-y-9 duration-200"
+                            :class="open ? 'translate-y-9' : ''">En</span>
+                        <img src="/images/icons/chevron-down-bleu.svg" alt="Open language tab"
+                            class="h-3 absolute -translate-y-9 left-1/2 -translate-x-1/2 group-hover:translate-y-0 duration-200"
+                            :class="open ? 'rotate-180 translate-y-0' : ''">
+                    </div>
+                    <div x-show="open" x-transition
+                        class="mt-2 bg-white border border-bleu/10 absolute top-10 right-0 w-96 rounded-md shadow-lg z-10 "
+                        @click.away="open = false">
+                        <div class="grid grid-cols-2 p-2 gap-2 text-zinc-500">
+                            <a href="#"
+                                class="rounded-sm border-bleu/10 hover:border-bleu/100 duration-200 border-[1px] flex items-center gap-2 px-2 py-1"><img
+                                    src="/images/icons/en.svg" alt="British Flag"
+                                    class="h-7 w-7 rounded-full">English</a>
+                            <a href="#"
+                                class="rounded-sm border-bleu/10 hover:border-bleu/100 duration-200 border-[1px] flex items-center gap-2 px-2 py-1"><img
+                                    src="/images/icons/fr.svg" alt="French Flag"
+                                    class="h-7 w-7 rounded-full">Français</a>
+                            <a href="#"
+                                class="rounded-sm border-bleu/10 hover:border-bleu/100 duration-200 border-[1px] flex items-center gap-2 px-2 py-1"><img
+                                    src="/images/icons/nl.svg" alt="Dutch Flag"
+                                    class="h-7 w-7 rounded-full">Nederlands</a>
+                            <a href="#"
+                                class="rounded-sm border-bleu/10 hover:border-bleu/100 duration-200 border-[1px] flex items-center gap-2 px-2 py-1"><img
+                                    src="/images/icons/es.svg" alt="Spanish Flag"
+                                    class="h-7 w-7 rounded-full">Español</a>
+                            <a href="#"
+                                class="rounded-sm border-bleu/10 hover:border-bleu/100 duration-200 border-[1px] flex items-center gap-2 px-2 py-1"><img
+                                    src="/images/icons/pr.svg" alt="Português Flag"
+                                    class="h-7 w-7 rounded-full">Português</a>
+                            <a href="#"
+                                class="rounded-sm border-bleu/10 hover:border-bleu/100 duration-200 border-[1px] flex items-center gap-2 px-2 py-1"><img
+                                    src="/images/icons/gr.svg" alt="German Flag"
+                                    class="h-7 w-7 rounded-full">Deutsch</a>
+                            <a href="#"
+                                class="rounded-sm border-bleu/10 hover:border-bleu/100 duration-200 border-[1px] flex items-center gap-2 px-2 py-1"><img
+                                    src="/images/icons/esp.svg" alt="Esperanto Flag"
+                                    class="h-7 w-7 rounded-full">Esperanto</a>
+                            <a href="#"
+                                class="rounded-sm border-bleu/10 hover:border-bleu/100 duration-200 border-[1px] flex items-center gap-2 px-2 py-1"><img
+                                    src="/images/icons/ukr.svg" alt="Ukranian Flag"
+                                    class="h-7 w-7 rounded-full">Українська</a>
+                        </div>
+                        <a href="#"
+                            class="m-2 text-zinc-500 rounded-sm border-bleu/10 hover:border-bleu/100 duration-200 border-[1px] flex items-center gap-2 px-2 py-1 justify-center">Request
+                            a New Language</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Mobile Menu-->
+            <div x-data="{ open: false }" x-effect="document.body.classList.toggle('overflow-hidden', open)"
+                class="md:hidden flex">
+                <button @click="open = true" class="md:hidden flex">
+                    <img src="/images/icons/menu.svg" alt="Menu" class="h-7">
+                </button>
+                <!-- Overlay for closing the menu when clicking outside -->
+                <div x-show="open" @click="open = false" class="fixed inset-0 bg-black/30 z-30" x-transition.opacity
+                    style="display: none;"></div>
+                <!-- Sliding menu -->
+                <div x-show="open" x-transition:enter="transition-transform duration-300"
+                    x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0"
+                    x-transition:leave="transition-transform duration-300" x-transition:leave-start="translate-x-0"
+                    x-transition:leave-end="translate-x-full"
+                    class="bg-white h-svh w-4/5 max-w-xs fixed top-0 right-0 z-40 shadow-lg flex flex-col pl-6 pt-6 pb-6 gap-4"
+                    @click.away="open = false" style="display: none;">
+                    <button @click="open = false" class="self-end mb-4 w-full bg-bleu/10 p-3 rounded-l-md">
+                        <img src="/images/icons/arrow-right-bleu-menu.svg" alt="Close" class="h-5">
+                    </button>
+                    <div class="flex flex-col justify-between h-full">
+                        <div class="flex flex-col gap-4">
+                            <a href="#" class="text-zinc-500 text-base">Guides</a>
+                            <a href="/about" class="text-zinc-500 text-base">About Us</a>
+                            <a href="#" class="text-zinc-500 text-base">Why Morse?</a>
+                        </div>
+                        <div>
+                            <p class="mb-2 text-zinc-500 text-sm">© 2025 Morse.Contact</p>
+                            <a href="#" class="flex gap-2 items-center text-zinc-500 text-sm"><span
+                                    class="h-3 w-3 bg-green-300 block rounded-full"></span>System Status</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of Mobile Menu-->
+
+            <img src="/images/morse-1.svg" alt="Morse Code"
+                class="md:hidden hidden absolute right-0 top-0 w-2/4 pointer-events-none">
+        </header>
+        <!--End of Header Section-->
+
+        <!--Login-->
+        <div class="px-4 md:px-12 pt-8 pb-12 md:pb-20 md:pt-12">
+            <div class="flex flex-col md:flex-row gap-4 md:gap-16 items-center justify-between">
+                <div class="w-full md:w-1/2">
+                    <span class="block text-lg font-bold text-bleu mb-1">Always happy to see you</span>
+                    <h1 class="text-2xl md:text-3xl font-bold uppercase text-noir mb-2">Welcome Back</h1>
+                    <p class="text-base text-zinc-500">Enter your email to receive a one-time passcode for your Morse account.</p>
+                    <form class="mt-8">
+                        <div class="relative">
+                            <input type="text" name="telegram" id="telegram" placeholder=" " required
+                                class="peer bg-white text-zinc-500 px-2 py-2 rounded-md border-2 border-zinc-200 hover:border-zinc-300 focus:border-bleu duration-200 outline-none w-full" />
+                            <label for="telegram"
+                                class="absolute left-2 top-[9px] text-zinc-300 bg-white px-1 transition-all duration-200 pointer-events-none
+                               peer-placeholder-shown:top-[9px] peer-placeholder-shown:text-base peer-placeholder-shown:text-zinc-400
+                               peer-focus:-top-2 peer-focus:text-xs peer-focus:text-bleu peer-focus:bg-white
+                               peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:text-bleu">
+                                Your Email Address
+                            </label>
+                        </div>
+                        <button type="submit"
+                            class="mt-4 px-4 py-2 bg-bleu hover:cursor-pointer text-white rounded-md hover:bg-bleu-700 duration-200 w-full">
+                            Login
+                        </button>
+                    </form>
+                    <p class="text-base text-zinc-500 mt-8">Don't have an account? <a href="/#start" class="text-bleu underline">Sign Up</a></p>
+                </div>
+                <div class="w-full md:w-1/2 md:block hidden">
+                    <div class="p-4 rounded-4xl bg-zinc-300/30 backdrop-blur-2xl relative w-full md:w-auto">
+                        <img src="/images/anime/sign-up.png" alt="Hero Image"
+                            class="h-72 md:h-[400px] w-full md:w-full object-cover rounded-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End of Login-->
+
+        <!--Footer Section-->
+        <footer class="px-4 md:px-12">
+            <div class="px-4 pt-4 rounded-t-4xl bg-zinc-300/30 backdrop-blur-2xl">
+                <div class="bg-white p-6 md:p-12 rounded-t-2xl">
+                    <div class="flex flex-col md:flex-row justify-between gap-8 md:gap-0">
+                        <div class="w-full md:w-1/3">
+                            <img src="/images/logo-full.svg" alt="Morse Logo" class="">
+                            <p class="text-bleu text-sm mt-4">We at <strong>Morse Contact</strong> aim to make the lives
+                                of business
+                                owners easier. Please feel free to contact us in case of any questions at <a
+                                    href="mailto:hi@morse.contact" class="underline">hi@morse.contact</a></p>
+                            <div class="flex gap-2 mt-4">
+                                <a href="#"><img src="/images/x.svg" alt="X"
+                                        class="h-5 opacity-70 hover:opacity-100 hover:scale-105 scale-100 duration-200"></a>
+                                <a href="#"><img src="/images/ig.svg" alt="Instagram"
+                                        class="h-5 opacity-70 hover:opacity-100 hover:scale-105 scale-100 duration-200"></a>
+                                <a href="#"><img src="/images/in.svg" alt="LinkedIn"
+                                        class="h-5 opacity-70 hover:opacity-100 hover:scale-105 scale-100 duration-200"></a>
+                                <a href="#"><img src="/images/tg.svg" alt="Telegram"
+                                        class="h-5 opacity-70 hover:opacity-100 hover:scale-105 scale-100 duration-200"></a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-8 md:gap-16 -translate-x-2 md:translate-x-0">
+                            <div>
+                                <h3 class="text-bleu px-2 text-base font-bold mb-4">Product</h3>
+                                <ul class="text-zinc-500 text-sm flex flex-col gap-2">
+                                    <li><a href="#"
+                                            class="px-2 py-1 hover:bg-zinc-100 rounded-md duration-200">Integrations</a>
+                                    </li>
+                                    <li><a href="#"
+                                            class="px-2 py-1 hover:bg-zinc-100 rounded-md duration-200">Guides</a></li>
+                                    <li><a href="#" class="px-2 py-1 hover:bg-zinc-100 rounded-md duration-200">Ask a
+                                            Demo</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-bleu px-2 text-base font-bold mb-4">Company</h3>
+                                <ul class="text-zinc-500 text-sm flex flex-col gap-2">
+                                    <li><a href="#" class="px-2 py-1 hover:bg-zinc-100 rounded-md duration-200">About
+                                            Us</a></li>
+                                    <li><a href="#" class="px-2 py-1 hover:bg-zinc-100 rounded-md duration-200">Why
+                                            Morse?</a></li>
+                                    <li><a href="#" class="px-2 py-1 hover:bg-zinc-100 rounded-md duration-200">Brand
+                                            Assets</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-bleu px-2 text-base font-bold mb-4">Legal</h3>
+                                <ul class="text-zinc-500 text-sm flex flex-col gap-2">
+                                    <li><a href="#" class="px-2 py-1 hover:bg-zinc-100 rounded-md duration-200">Terms of
+                                            Use</a></li>
+                                    <li><a href="#"
+                                            class="px-2 py-1 hover:bg-zinc-100 rounded-md duration-200">Privacy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row justify-between gap-2 md:gap-0 md:items-center mt-12">
+                        <a href="#" class="flex items-center gap-2">
+                            <div class="h-4 w-4 bg-green-400 rounded-full"></div><span
+                                class="text-sm text-zinc-500">System Status</span>
+                        </a>
+                        <p class="text-zinc-500 text-sm">© 2025 Morse.Contact</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End of Footer Section-->
+    </div>
+
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
