@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../src/style.css">
+    <title>Why Morse?</title>
+    <link rel="stylesheet" href="/src/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -14,7 +14,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Morse Contact – Login">
+    <meta property="og:title" content="Morse Contact – Why Morse?">
     <meta property="og:description"
         content="Add a support widget to your website and connect with customers via Telegram. One-time payment, no subscriptions.">
     <meta property="og:url" content="https://morse.contact/">
@@ -22,7 +22,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Morse Contact – Login">
+    <meta name="twitter:title" content="Morse Contact – Why Morse?">
     <meta name="twitter:description"
         content="Add a support widget to your website and connect with customers via Telegram. One-time payment, no subscriptions.">
     <meta name="twitter:image" content="/images/og-image.jpg">
@@ -162,45 +162,85 @@
             <!--End of Mobile Menu-->
 
             <img src="/images/morse-1.svg" alt="Morse Code"
-                class="md:hidden hidden absolute right-0 top-0 w-2/4 pointer-events-none">
+                class="md:block hidden absolute right-0 top-0 w-2/4 pointer-events-none -z-20">
         </header>
         <!--End of Header Section-->
 
-        <!--Login-->
-        <div class="px-4 md:px-12 pt-8 pb-12 md:pb-20 md:pt-12">
-            <div class="flex flex-col md:flex-row gap-4 md:gap-16 items-center justify-between">
+        <!--Why Morse-->
+        <div class="px-4 md:px-12 pt-8 pb-12 md:pb-12 md:pt-12">
+            <div class="flex flex-col md:flex-row gap-4 md:gap-24 items-center justify-between">
                 <div class="w-full md:w-1/2">
-                    <span class="block text-lg font-bold text-bleu mb-1">Always happy to see you</span>
-                    <h1 class="text-2xl md:text-3xl font-bold uppercase text-noir mb-2">Welcome Back</h1>
-                    <p class="text-base text-zinc-500">Enter your email to receive a one-time passcode for your Morse account.</p>
-                    <form class="mt-8">
-                        <div class="relative">
-                            <input type="text" name="telegram" id="telegram" placeholder=" " required
-                                class="peer bg-white text-zinc-500 px-2 py-2 rounded-md border-2 border-zinc-200 hover:border-zinc-300 focus:border-bleu duration-200 outline-none w-full" />
-                            <label for="telegram"
-                                class="absolute left-2 top-[9px] text-zinc-300 bg-white px-1 transition-all duration-200 pointer-events-none
-                               peer-placeholder-shown:top-[9px] peer-placeholder-shown:text-base peer-placeholder-shown:text-zinc-400
-                               peer-focus:-top-2 peer-focus:text-xs peer-focus:text-bleu peer-focus:bg-white
-                               peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:text-bleu">
-                                Your Email Address
-                            </label>
-                        </div>
-                        <button type="submit"
-                            class="mt-4 px-4 py-2 bg-bleu hover:cursor-pointer text-white rounded-md hover:bg-bleu-700 duration-200 w-full">
-                            Login
-                        </button>
-                    </form>
-                    <p class="text-base text-zinc-500 mt-8">Don't have an account? <a href="/#start" class="text-bleu underline">Sign Up</a></p>
+                    <span class="block text-lg font-bold text-bleu mb-1">Why we are the best fit?</span>
+                    <h1 class="text-2xl md:text-3xl font-bold uppercase text-noir mb-2">Why Morse?</h1>
+                    <p class="text-base text-zinc-500">Let's dive into why Morse Contact is precisely the solution your business needs for superior support. In today's fast-paced environment, effective customer interaction is no longer a luxury but a core differentiator. We'll show you how our unique approach, streamlined processes, and globally distributed expertise translate directly into enhanced customer satisfaction.</p>
                 </div>
                 <div class="w-full md:w-1/2 md:block hidden">
                     <div class="p-4 rounded-4xl bg-zinc-300/30 backdrop-blur-2xl relative w-full md:w-auto">
-                        <img src="/images/anime/sign-up.png" alt="Hero Image"
+                        <img src="/images/morse.png" alt="Hero Image"
                             class="h-72 md:h-[400px] w-full md:w-full object-cover rounded-2xl">
                     </div>
                 </div>
             </div>
         </div>
-        <!--End of Login-->
+        <!--End of Why Morse-->
+
+        <!--Reasons-->
+        <div class="px-4 md:px-12 pt-12 pb-12 md:pb-20 md:pt-20 flex flex-col lg:flex-row gap-4">
+            <div class="w-full lg:w-1/4 p-4 rounded-4xl bg-zinc-300/30 backdrop-blur-2xl">
+                <div class="rounded-2xl bg-white/70 p-4 md:p-6 flex flex-col items-center gap-2 h-full backdrop-blur-2xl">
+                    <img src="/images/icons/wallet.svg" alt="Pay Once" class="h-12 w-12 mb-2">
+                    <h2 class="text-bleu text-base font-bold text-center">Pay Once, Yours Forever</h2>
+                    <p class="text-sm text-zinc-500 text-center">At Morse Contact, we believe in straightforward value, not endless fees. You pay once for our service, and it's yours forever—no subscriptions, no complicated plans, just simple, permanent ownership.</p>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/4 p-4 rounded-4xl bg-zinc-300/30 backdrop-blur-2xl">
+                <div class="rounded-2xl bg-white/70 p-4 md:p-6 flex flex-col items-center gap-2 h-full backdrop-blur-2xl">
+                    <img src="/images/icons/color.svg" alt="Customization" class="h-12 w-12 mb-2">
+                    <h2 class="text-bleu text-base font-bold text-center">Endless Customization</h2>
+                    <p class="text-sm text-zinc-500 text-center">Take full control of your widget's look and feel. From colors to its icon, you can effortlessly adjust every visual element right in your dashboard, ensuring a perfect fit for your website without needing any coding expertise.</p>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/4 p-4 rounded-4xl bg-zinc-300/30 backdrop-blur-2xl">
+                <div class="rounded-2xl bg-white/70 p-4 md:p-6 flex flex-col items-center gap-2 h-full backdrop-blur-2xl">
+                    <img src="/images/icons/laptop.svg" alt="Telegram" class="h-12 w-12 mb-2">
+                    <h2 class="text-bleu text-base font-bold text-center">No New App Needed</h2>
+                    <p class="text-sm text-zinc-500 text-center">Your support team can effortlessly connect with customers using their familiar Telegram messaging app—free and available on any device. No new apps to install, just instant, convenient communication.</p>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/4 p-4 rounded-4xl bg-zinc-300/30 backdrop-blur-2xl">
+                <div class="rounded-2xl bg-white/70 p-4 md:p-6 flex flex-col items-center gap-2 h-full backdrop-blur-2xl">
+                    <img src="/images/icons/security.svg" alt="Security" class="h-12 w-12 mb-2">
+                    <h2 class="text-bleu text-base font-bold text-center">Your Data, Secured</h2>
+                    <p class="text-sm text-zinc-500 text-center">At Morse Contact, safeguarding your data is paramount. We employ robust security measures to ensure your information remains private and protected, allowing you to focus on your customers.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--End of Reasons-->
+
+        <!--Support-->
+        <div class="px-4 md:px-12 pt-8 pb-16 md:pb-24 md:pt-12">
+            <div class="flex flex-col md:flex-row gap-4 md:gap-24 items-center justify-between">
+                <div class="w-full md:w-1/2 md:block hidden">
+                    <div class="p-4 rounded-4xl bg-zinc-300/30 backdrop-blur-2xl relative w-full md:w-auto">
+                        <img src="/images/support.png" alt="Hero Image"
+                            class="h-72 md:h-[400px] w-full md:w-full object-cover rounded-2xl">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <span class="block text-lg font-bold text-bleu mb-1">Need a Hand?</span>
+                    <h1 class="text-2xl md:text-3xl font-bold uppercase text-noir mb-2">Dedicated Support</h1>
+                    <p class="text-base text-zinc-500 mb-4">Something not working? Unsure how to begin? Or simply curious to learn more about Morse Contact? We're always here to help. Just reach out to us!</p>
+                    <a href="#"
+                        class="px-4 md:px-8 py-2 bg-bleu duration-200 group rounded-md text-white relative overflow-hidden block md:inline-block">
+                        <span class="block group-hover:-translate-x-0 md:group-hover:-translate-x-4 duration-200">Support</span>
+                        <img src="/images/icons/arrow-right.svg" alt="Arrow Right"
+                            class="absolute h-5 right-3 top-1/2 -translate-y-1/2 transition-transform duration-200 group-hover:translate-x-0 translate-x-10">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--End of Support-->
 
         <!--Footer Section-->
         <footer class="px-4 md:px-12">
@@ -273,7 +313,7 @@
     </div>
 
 
-    <script type="module" src="../src/main.js"></script>
+    <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
